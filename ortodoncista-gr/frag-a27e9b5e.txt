@@ -183,7 +183,7 @@ html,body{margin:0;padding:0;background:#F1F7FC}html{scroll-behavior:smooth}#ot-
 </div>
 
 <span id="qz-price" hidden>{{price}}</span>
-<span id="qz-price-old" hidden>{{original_price}}</span><span id="qz-save" hidden>{{savings}}</span>
+
 <script>
 (function(){
 var W = 'https://recursos-pdf-hub.github.io/entregas-4/ortodoncista-gr/landing-img/';
@@ -288,8 +288,8 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;
 function txt(id){ var el=document.getElementById(id); var v=el?el.textContent.trim():''; return /\{\{/.test(v)?'':v; }
 function num(s){ s=(s||'').replace(/[^\d.,]/g,''); var i=Math.max(s.lastIndexOf('.'),s.lastIndexOf(','));
   if(i>-1&&s.length-i-1<=2){ s=s.slice(0,i).replace(/[.,]/g,'')+'.'+s.slice(i+1); } else { s=s.replace(/[.,]/g,''); } return parseFloat(s); }
-var PRICE=txt('qz-price'), OLD=txt('qz-price-old'), SAVE=txt('qz-save');
-var PCT=(num(PRICE)>0&&num(OLD)>num(PRICE))?Math.round((1-num(PRICE)/num(OLD))*100):0;
+var PRICE=txt('qz-price');
+
 function buzz(){ if(navigator.vibrate) navigator.vibrate(10); }
 
 
@@ -471,10 +471,9 @@ function renderSale(){
   var li=function(a){ return a.map(function(x){ return '<li><b>'+esc(x.t)+':</b> '+esc(x.d)+'</li>'; }).join(''); };
   var mapsStrip=['angle','espacio','abierta','cruzada','planif'].map(function(k){ return '<img src="'+CONFIG.MAPAS[k]+'" alt="Οπτικός χάρτης" loading="lazy" decoding="async">'; }).join('');
   var priceBox='<div class="qz-price" id="ot-offer"><div class="lab">Η πρόσβασή σας σήμερα</div>'+
-    (OLD?'<div class="old">'+esc(OLD)+'</div>':'')+
+    
     '<div class="now">'+(PRICE?esc(PRICE):'')+'</div>'+
-    (PCT?'<span class="off">−'+PCT+'%</span>':'')+
-    (SAVE?'<div class="note" style="margin-top:2px">Εξοικονομείτε: <b>'+esc(SAVE)+'</b></div>':'')+
+    
     '<a class="qz-cta qz-buy" href="/checkout">ΘΕΛΩ ΠΡΟΣΒΑΣΗ ΤΩΡΑ</a>'+
     '<div class="note">Εφάπαξ πληρωμή · Χωρίς συνδρομή · Φτάνει αμέσως στο email · Εγγύηση 7 ημερών</div></div>';
   var tst=(CONFIG.TESTIMONIALS||[]).map(function(x){
