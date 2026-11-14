@@ -355,7 +355,7 @@ body{margin:0;line-break:strict;overflow-wrap:anywhere;word-break:normal;backgro
 </div>
 <script>
 (function(){
- try{var d=new Date(),var el=document.getElementById('tp-date');if(el)el.textContent=d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日';}catch(e){}
+ try{var d=new Date(),m=0;var el=document.getElementById('tp-date');if(el)el.textContent=d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日';}catch(e){}
  var mm=document.getElementById('tp-mm'),ss=document.getElementById('tp-ss');if(!mm||!ss)return;
  var end;try{end=parseInt(localStorage.getItem('tp_end')||'0',10);}catch(e){end=0}
  var now=Date.now();if(!end||end<now){end=now+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}}
