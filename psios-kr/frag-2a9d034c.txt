@@ -1,0 +1,1009 @@
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Noto+Sans+KR:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<style>:root{
+  --bg:#F7F6F2;
+  --bg-alt:#EFEDE7;
+  --surface:#FFFFFF;
+  --text:#202525;
+  --muted:#5D6664;
+  --primary:#183D46;
+  --primary-soft:#2B565F;
+  --secondary:#7E988A;
+  --sand:#C2AE95;
+  --border:rgba(32,37,37,.14);
+  --border-soft:rgba(32,37,37,.08);
+  --shadow:0 1px 2px rgba(24,61,70,.04), 0 8px 28px rgba(24,61,70,.06);
+  --shadow-lift:0 2px 6px rgba(24,61,70,.06), 0 18px 44px rgba(24,61,70,.10);
+  --serif:"Noto Serif KR", "Apple SD Gothic Neo", serif;
+  --sans:"Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --wrap:1220px;
+  --radius:12px;
+  --radius-lg:16px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}:where(.ps-root) *,:where(.ps-root) *::before,:where(.ps-root) *::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}html:focus-within{scroll-behavior:smooth}body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}:where(.ps-root) img,:where(.ps-root) video{max-width:100%;height:auto;display:block}:where(.ps-root) a{color:inherit;text-decoration:none}:where(.ps-root) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}:where(.ps-root) ul{margin:0;padding:0;list-style:none}:where(.ps-root) h1,:where(.ps-root) h2,:where(.ps-root) h3,:where(.ps-root) h4{font-family:var(--serif);font-weight:400;letter-spacing:-.012em;line-height:1.14;margin:0}:where(.ps-root) h1{font-size:clamp(2.5rem,5.4vw,4.1rem)}:where(.ps-root) h2{font-size:clamp(1.95rem,3.5vw,3rem)}:where(.ps-root) h3{font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.22}:where(.ps-root) h4{font-size:1.15rem;line-height:1.3}:where(.ps-root) p{margin:0 0 1.1em}:where(.ps-root) p:last-child{margin-bottom:0}:where(.ps-root) :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}.ps-wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 28px}.ps-wrap-narrow{max-width:820px;margin:0 auto}.ps-section{padding:clamp(56px,6vw,92px) 0}.ps-section--alt{background:var(--bg-alt)}.ps-section--tight{padding-top:clamp(52px,6vw,80px)}.ps-eyebrow{
+  font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--secondary);margin:0 0 20px;display:block;
+}.ps-eyebrow--light{color:rgba(247,246,242,.62)}.ps-lead{font-size:clamp(1.06rem,1.5vw,1.22rem);color:var(--muted);max-width:62ch}.ps-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--primary);color:#F7F6F2;
+  font-size:1rem;font-weight:600;letter-spacing:.01em;
+  padding:17px 34px;border-radius:8px;
+  transition:background .25s var(--ease), transform .25s var(--ease);
+}.ps-btn:hover{background:var(--primary-soft);transform:translateY(-1px)}.ps-btn--lg{padding:21px 44px;font-size:1.06rem}.ps-microcopy{font-size:.85rem;color:var(--muted);margin-top:16px}.js .ps-reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease), transform .7s var(--ease)}.ps-reveal.ps-is-visible{opacity:1;transform:none}.ps-hero{padding:clamp(48px,6vw,72px) 0 clamp(48px,5vw,72px)}.ps-hero__grid{display:flex;flex-direction:column;align-items:center;text-align:center}.ps-hero h1{margin:0 0 22px}.ps-hero__head{order:1;max-width:940px}.ps-hero__figure{order:3;position:relative;width:100%;margin:clamp(44px,5vw,64px) 0 0}.ps-hero__sub{font-family:var(--sans);font-size:clamp(1.12rem,1.7vw,1.35rem);font-weight:400;line-height:1.5;color:var(--muted);margin:0 auto;max-width:52ch}.ps-hero__figure img{width:100%;border-radius:0;box-shadow:none}.ps-gallery__item{margin:0}.ps-anatomy{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(28px,3.5vw,52px);align-items:center;margin-top:40px}.ps-anatomy__figure{position:sticky;top:100px;margin:0}.ps-anatomy__figure img{width:100%;border:0;border-radius:0;box-shadow:none;background:none}.ps-steps{counter-reset:none}.ps-steps{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}.ps-steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--border-soft)}.ps-steps li:nth-child(1),.ps-steps li:nth-child(2){padding-top:0}.ps-steps li:nth-child(5),.ps-steps li:nth-child(6){border-bottom:0}.ps-steps__num{font-family:var(--serif);font-size:1.4rem;color:var(--secondary);line-height:1.1}.ps-steps h3{font-size:1.02rem;font-family:var(--sans);font-weight:600;letter-spacing:0;margin-bottom:3px}.ps-steps p{font-size:.92rem;line-height:1.5;color:var(--muted);margin:0}@media (max-width:680px){.ps-steps{grid-template-columns:1fr}.ps-steps li:nth-child(2){padding-top:16px}.ps-steps li:nth-child(5){border-bottom:1px solid var(--border-soft)}}.ps-kinds{display:block;margin-top:44px}.ps-kind{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:clamp(30px,4vw,64px);align-items:center;
+  background:none;border:0;border-radius:0;padding:clamp(34px,4vw,52px) 0;
+  border-bottom:1px solid var(--border-soft);
+}.ps-kind:last-child{border-bottom:0;padding-bottom:0}.ps-kind:first-child{padding-top:0}.ps-kind:nth-child(even) .ps-kind__media{order:2}.ps-kind__media{background:none;border:0;padding:0;min-height:0;display:block}.ps-kind__media img{width:100%;max-height:none;height:auto;box-shadow:none;border-radius:0}.ps-kind__body{padding:0;display:flex;flex-direction:column;gap:12px}.ps-kind__count{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}.ps-kind h3{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.15rem);font-weight:400;letter-spacing:-.01em}.ps-kind p{font-size:1.02rem;line-height:1.55;margin:0}.ps-kind__list{margin-top:2px}.ps-kind__list li{
+  position:relative;padding:8px 0 8px 28px;font-size:1rem;line-height:1.45;color:var(--text);
+}.ps-kind__list li::before{
+  content:"";position:absolute;left:2px;top:14px;width:11px;height:6px;
+  border-left:2px solid var(--clay);border-bottom:2px solid var(--clay);
+  transform:rotate(-45deg);
+}@media (max-width:820px){.ps-kind{grid-template-columns:1fr;gap:22px;padding:32px 0}.ps-kind:nth-child(even) .ps-kind__media{order:0}}.ps-summary-list{margin-top:46px;border-top:1px solid var(--border)}.ps-acc{border-bottom:1px solid var(--border)}.ps-summary-list h3,.ps-faq h3{font-family:var(--sans);font-weight:400;margin:0}.ps-acc__trigger{
+  width:100%;display:flex;align-items:center;gap:18px;
+  padding:20px 4px;text-align:left;font-family:var(--sans);
+  transition:color .2s var(--ease);
+}.ps-acc__trigger:hover{color:var(--primary)}.ps-acc__index{font-family:var(--sans);font-size:.92rem;font-weight:600;letter-spacing:.06em;color:var(--secondary);min-width:30px}.ps-acc__title{
+  flex:1;font-family:var(--sans) !important;font-size:1.04rem;font-weight:500;
+  letter-spacing:0;text-transform:none;line-height:1.35;color:var(--text);
+}.ps-acc__badge{font-size:.78rem;letter-spacing:.02em;text-transform:none;color:var(--muted);white-space:nowrap}.ps-acc__arrow{width:14px;height:14px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s var(--ease);flex:none}.ps-acc__trigger[aria-expanded="true"] .ps-acc__arrow{transform:rotate(225deg) translate(-3px,-3px)}.ps-acc__panel{overflow:hidden;height:0;transition:height .35s var(--ease)}.ps-acc__inner{padding:2px 4px 30px}.ps-acc__inner p{font-size:.98rem;color:var(--muted)}.ps-maps{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 40px}.ps-maps li{display:flex;gap:14px;padding:9px 0;font-size:.97rem;border-bottom:1px solid var(--border-soft)}.ps-maps li b{font-weight:400;color:var(--secondary);min-width:32px;font-variant-numeric:tabular-nums}.ps-smart{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(38px,5vw,68px);align-items:center;margin-top:48px}.ps-smart__figure{margin:0}.ps-smart__figure img{width:100%;border:1px solid var(--border-soft);border-radius:var(--radius);box-shadow:var(--shadow-lift);background:#fff}.ps-refs{display:flex;flex-wrap:wrap;gap:10px 12px;background:none;border:0;margin-top:26px}.ps-refs li{background:none;padding:0;display:flex;align-items:baseline;gap:8px;
+  border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-size:.9rem}.ps-refs__name{font-family:var(--sans);font-size:.9rem;font-weight:500;line-height:1.3;margin:0;color:var(--text)}.ps-refs__line{font-size:.82rem;color:var(--muted);margin:0}.ps-disclaimer{font-size:.82rem;color:var(--muted);border-left:2px solid var(--border);padding-left:18px;margin-top:26px;max-width:70ch}.ps-stack{margin-top:40px;border-top:0;display:flex;flex-direction:column;gap:18px}.ps-stack__item{
+  display:grid;grid-template-columns:260px 1fr;gap:clamp(24px,3vw,44px);align-items:center;
+  padding:26px 30px;border:1.5px solid var(--clay);border-radius:var(--radius-lg);
+  background:var(--surface);
+}.ps-stack__item img{width:100%;border-radius:12px;box-shadow:none}.ps-stack__item h3{margin-bottom:8px;font-size:1.4rem}.ps-stack__item p{color:var(--muted);max-width:52ch;margin:0}@media (max-width:900px){.ps-stack__item{grid-template-columns:1fr;gap:18px;padding:22px 22px 26px}}.ps-stack__item--bonus{border-color:var(--deep);position:relative}.ps-stack__label--bonus{
+  display:inline-block;background:var(--deep);color:#F4EDE4;
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  padding:5px 12px;border-radius:999px;margin-bottom:10px;
+}.ps-stack__item--noimg{grid-template-columns:1fr}.ps-offer{background:var(--primary);color:#F7F6F2}.ps-offer h2{color:#fff}.ps-offer__list{margin:30px 0 36px}.ps-offer__list li{position:relative;padding-left:28px;padding-block:9px;font-size:1rem;color:rgba(247,246,242,.9);border-bottom:1px solid rgba(247,246,242,.14)}.ps-offer__list li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:5px;border-left:1.5px solid var(--green-line);border-bottom:1.5px solid var(--green-line);transform:rotate(-45deg)}.ps-price__now{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);line-height:1.05;color:#fff;margin:6px 0 4px}.ps-offer .ps-microcopy{color:rgba(247,246,242,.62)}.ps-offer .ps-btn{width:100%;max-width:460px}.ps-guarantee{display:grid;grid-template-columns:220px 1fr;gap:clamp(30px,5vw,64px);align-items:center}.ps-faq{margin-top:44px;border-top:1px solid var(--border);max-width:900px}.ps-faq .ps-acc__trigger{gap:24px}.ps-faq .ps-acc__title{font-family:var(--sans) !important;font-size:1.05rem;font-weight:500;letter-spacing:0}.ps-final{position:relative;overflow:hidden;background:var(--bg-alt)}.ps-final__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(40px,5vw,72px);align-items:center}.ps-final__figure img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lift)}.ps-final__verbs{font-family:var(--serif);font-size:clamp(1.2rem,1.9vw,1.5rem);line-height:1.7;color:var(--primary);margin:26px 0 36px}@media (max-width:1080px){.ps-refs{grid-template-columns:repeat(2,1fr)}}@media (max-width:900px){body{font-size:16px}.ps-anatomy,.ps-smart,.ps-final__grid,.ps-guarantee{grid-template-columns:1fr}.ps-hero__figure{order:2;margin-top:34px}.ps-anatomy__figure{position:static}.ps-anatomy{gap:26px}.ps-stack__item{grid-template-columns:1fr;gap:22px}.ps-kinds{grid-template-columns:repeat(2,1fr)}.ps-maps{grid-template-columns:1fr}}@media (max-width:680px){.ps-wrap{padding:0 20px}.ps-section{padding:52px 0}:where(.ps-root) h1{font-size:2.35rem}:where(.ps-root) h2{font-size:1.85rem}.ps-kinds{grid-template-columns:1fr}.ps-refs{grid-template-columns:1fr}.ps-btn{width:100%}}@media (prefers-reduced-motion: reduce){html:focus-within{scroll-behavior:auto}:where(.ps-root) *,:where(.ps-root) *::before,:where(.ps-root) *::after{animation-duration:.001ms !important;transition-duration:.001ms !important}.ps-reveal{opacity:1;transform:none}}:root{
+  --bg:#F8F1E8;            
+  --bg-alt:#F1E7DA;        
+  --surface:#FFFFFF;
+  --text:#22312F;
+  --muted:#5F6E6B;
+  --deep:#1B4B4E;          
+  --clay:#8A5A3C;          
+  --accent:#E08B5E;        
+  --accent-soft:#F2C4A6;
+  --primary:#1B4B4E;
+  --primary-soft:#26666A;
+  --secondary:#B98B63;
+  --border:rgba(34,49,47,.14);
+  --border-soft:rgba(34,49,47,.08);
+  --radius:18px;
+  --radius-lg:26px;
+  --shadow:0 2px 4px rgba(27,75,78,.05), 0 12px 32px rgba(27,75,78,.07);
+  --shadow-lift:0 4px 10px rgba(27,75,78,.07), 0 24px 56px rgba(27,75,78,.12);
+}.ps-section--deep{background:var(--deep);color:#F4EDE4}.ps-section--deep h2,.ps-section--deep h3{color:#FFFFFF}.ps-section--deep .ps-lead,.ps-section--deep p{color:rgba(244,237,228,.78)}.ps-section--deep .ps-eyebrow{color:var(--accent-soft)}.ps-section--deep,.ps-final,.ps-offer{
+  border-top-left-radius:50% 46px;
+  border-top-right-radius:50% 46px;
+  margin-top:-46px;
+  position:relative;
+  z-index:1;
+}.ps-hero + .ps-section--deep{z-index:2}.ps-kind,.ps-gallery__item,.ps-smart__figure img,.ps-stack__item img,.ps-hero__figure img{
+  border-radius:var(--radius);
+}.ps-anatomy__figure img{border-radius:0 !important;box-shadow:none !important;border:0 !important}.ps-hero__figure img,.ps-final__figure img{border-radius:var(--radius-lg)}.ps-section--deep .ps-kind{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.16);
+}.ps-section--deep .ps-kind__media{background:rgba(255,255,255,.05);border-bottom-color:rgba(255,255,255,.14)}.ps-section--deep .ps-kind h3{color:#fff}.ps-section--deep .ps-kind p{color:rgba(244,237,228,.76)}.ps-btn{
+  background:var(--accent);color:#2A1A10;border-radius:999px;
+  padding:18px 38px;font-weight:600;
+  box-shadow:0 6px 18px rgba(224,139,94,.28);
+}.ps-btn:hover{background:#EC9A6D;transform:translateY(-1px)}.ps-btn--lg{padding:22px 48px}.ps-kind__count{letter-spacing:.14em}.ps-hero{padding-bottom:0}.ps-hero__grid{padding-left:0;padding-right:0}.ps-hero__head{padding-left:28px;padding-right:28px}.ps-hero__figure{
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  margin-bottom:0;
+}.ps-hero__figure img{
+  width:100vw;
+  max-width:none;
+  height:auto;
+  display:block;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}@media (max-width:680px){.ps-hero__head{padding-left:20px;padding-right:20px}}.ps-offer{background:#1F5C3A}.ps-final{background:var(--clay);color:#FAF3EC}.ps-final h2{color:#fff}.ps-final__verbs{color:var(--accent-soft)}.ps-final .ps-microcopy{color:rgba(250,243,236,.7)}@media (max-width:680px){.ps-section--deep,.ps-final,.ps-offer,.ps-section--deep + .ps-section,.ps-offer + .ps-section,.ps-final + .ps-section{
+    border-top-left-radius:50% 26px;border-top-right-radius:50% 26px;margin-top:-26px;
+  }}.ps-allin{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 44px;margin-top:34px}.ps-allin li{
+  position:relative;padding:9px 0 9px 30px;font-size:1.02rem;color:#F4EDE4;line-height:1.45;
+}.ps-allin li::before{
+  content:"";position:absolute;left:2px;top:15px;width:11px;height:6px;
+  border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  transform:rotate(-45deg);
+}.ps-allin li b{font-weight:600;color:#fff}.ps-compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}.ps-compare__col{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius);padding:30px 28px 32px}.ps-compare__col--after{background:var(--deep);border-color:var(--deep);color:#F4EDE4}.ps-compare__col h3{font-size:1.25rem;margin-bottom:20px}.ps-compare__col--after h3{color:#fff}.ps-compare__col li{position:relative;padding-left:26px;padding-block:9px;font-size:.98rem;color:var(--muted);border-bottom:1px solid var(--border-soft)}.ps-compare__col--after li{color:rgba(244,237,228,.86);border-bottom-color:rgba(255,255,255,.14)}.ps-compare__col li:last-child{border-bottom:0}.ps-compare__col li::before{content:"";position:absolute;left:2px;top:18px;width:10px;height:2px;background:var(--clay);opacity:.6}.ps-compare__col--after li::before{
+  content:"";width:9px;height:5px;background:none;top:16px;
+  border-left:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);
+  transform:rotate(-45deg);opacity:1;
+}@media (max-width:900px){.ps-allin,.ps-compare{grid-template-columns:1fr}}.ps-marquee{position:relative;margin-top:44px;overflow:hidden;
+  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  width:100vw;max-width:100vw;
+}.ps-marquee .ps-gallery{
+  display:flex !important;width:max-content !important;gap:0 !important;
+  margin:0 !important;padding:4px 0 8px !important;overflow:visible !important;
+  will-change:transform;
+}.ps-marquee .ps-gallery__group{display:flex;gap:26px;padding-right:26px;flex:none}.ps-marquee .ps-gallery__item{
+  flex:0 0 360px !important;cursor:pointer;
+  border:1px solid var(--border-soft);border-radius:var(--radius);
+  overflow:hidden;background:var(--surface);
+}.ps-marquee .ps-gallery__item img{width:100%;aspect-ratio:1/1.414;object-fit:cover;display:block}@media (max-width:900px){.ps-marquee .ps-gallery__item{flex:0 0 300px !important}}@media (max-width:680px){.ps-marquee .ps-gallery__group{gap:18px;padding-right:18px}.ps-marquee .ps-gallery__item{flex:0 0 260px !important}}:root{--green:#4E9E58;--green-soft:#63B26D;--green-line:#7CC486}.ps-btn{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(78,158,88,.28)}.ps-btn:hover{background:var(--green-soft)}.ps-pricebox{
+  background:#fff;border:3px solid var(--green-line);border-radius:26px;
+  padding:clamp(30px,4vw,46px) clamp(24px,3vw,44px);text-align:center;
+  max-width:640px;margin:0 auto;
+}.ps-pricebox .ps-price__from{
+  font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:700;color:var(--text);margin:0 0 12px;
+}.ps-pricebox .ps-price__from s{color:var(--text);text-decoration-color:#D8452F;text-decoration-thickness:3px}.ps-pricebox .ps-price__now{
+  font-family:var(--sans);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(2.5rem,6vw,3.9rem);line-height:1.05;color:var(--green);margin:0 0 10px;
+}.ps-pricebox .ps-price__cash{
+  font-size:clamp(1.05rem,2vw,1.4rem);font-weight:700;color:var(--text);
+  text-transform:uppercase;letter-spacing:.01em;margin:0 0 26px;
+}.ps-pricebox .ps-btn{width:100%;font-size:1.02rem;line-height:1.35;padding:20px 26px;text-transform:uppercase}.ps-pricebox .ps-microcopy{color:var(--muted);margin-top:16px}.ps-offer__list--center{max-width:640px;margin:0 auto 34px}.ps-cta-solo{text-align:center;padding-top:8px}.ps-cta-solo .ps-btn{max-width:520px;width:100%}.ps-guarantee{grid-template-columns:180px 1fr;align-items:center}.ps-guarantee figure img{
+  width:100%;max-width:180px;height:auto;margin:0;
+}@media (max-width:900px){.ps-guarantee{grid-template-columns:1fr;gap:24px;text-align:center;justify-items:center}.ps-guarantee figure img{max-width:120px}.ps-guarantee .ps-lead{margin-left:auto;margin-right:auto}}.ps-topbar{
+  background:#C0392B;color:#fff;text-align:center;
+  padding:11px 20px;font-size:.92rem;font-weight:600;
+  letter-spacing:.01em;line-height:1.35;
+}.ps-topbar b{font-weight:800}@media (max-width:520px){.ps-topbar{font-size:.84rem;padding:10px 16px}}.ps-tdf-acesso{
+    --tdf-teal:#23403D;
+    --tdf-teal-lt:#3A5E5A;
+    --tdf-cream:#F3EDE2;
+    --tdf-coral:#D95D39;
+    --tdf-rule:#D8CFBF;
+    --tdf-muted:#7A7068;
+    font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    max-width:760px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid var(--tdf-rule);
+    border-top:3px solid var(--tdf-coral);
+    border-radius:10px;
+    padding:28px 26px 24px;
+    box-shadow:0 8px 28px rgba(35,64,61,.07);
+    box-sizing:border-box;
+  }.ps-tdf-acesso *{box-sizing:border-box}.ps-tdf-acesso-head{text-align:center;margin-bottom:22px}.ps-tdf-acesso-badge{
+    display:inline-block;
+    background:var(--tdf-teal);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:7px 18px;
+    border-radius:40px;
+    margin-bottom:12px;
+  }.ps-tdf-acesso-sub{
+    font-family:'Noto Serif KR',serif;
+    font-style:italic;
+    font-size:17px;
+    color:var(--tdf-muted);
+    line-height:1.5;
+    margin:0;
+  }.ps-tdf-acesso-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }.ps-tdf-acesso-item{
+    display:flex;
+    gap:13px;
+    align-items:flex-start;
+    background:var(--tdf-cream);
+    border:1px solid var(--tdf-rule);
+    border-radius:8px;
+    padding:16px 16px 17px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }.ps-tdf-acesso-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px rgba(35,64,61,.12);
+  }.ps-tdf-acesso-ico{
+    width:36px;height:36px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:var(--tdf-teal);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;
+    line-height:1;
+  }.ps-tdf-acesso-item strong{
+    display:block;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--tdf-teal);
+    margin-bottom:4px;
+    line-height:1.3;
+  }.ps-tdf-acesso-item span{
+    display:block;
+    font-size:12.5px;
+    color:var(--tdf-muted);
+    line-height:1.5;
+  }@media (max-width:720px){.ps-tdf-acesso{padding:24px 18px 20px;border-radius:8px}.ps-tdf-acesso-grid{grid-template-columns:1fr;gap:10px}.ps-tdf-acesso-sub{font-size:15.5px}.ps-tdf-acesso-item{padding:14px}}@media (prefers-reduced-motion:reduce){.ps-tdf-acesso-item{transition:none}.ps-tdf-acesso-item:hover{transform:none}}
+html{scroll-behavior:smooth;background:#fff}
+.ps-root{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#ps-oferta{scroll-margin-top:24px}
+.js .ps-reveal.ps-is-visible{opacity:1;transform:none}
+.ps-root .ps-hero__cta .ps-btn{max-width:100%}
+@media(max-width:520px){.ps-root img{max-width:100%;height:auto}.ps-root .ps-btn--lg{width:100%;text-align:center}}
+@media(max-width:380px){.ps-root .ps-btn{font-size:.95rem;padding-left:14px;padding-right:14px}}
+.ps-root,.ps-root h1,.ps-root h2,.ps-root h3,.ps-root h4,.ps-root p,.ps-root li,.ps-root span,.ps-root summary,.ps-root a,.ps-root div{word-break:keep-all;overflow-wrap:break-word}.ps-root em,.ps-root i{font-style:normal}</style>
+<script>try{document.documentElement.classList.add('js')}catch(e){}</script>
+<div class="ps-root">
+<div class="ps-topbar">평생 이용 + <b>{{savings}} 할인</b> · 기간 한정</div>
+<main>
+
+<section class="ps-hero" id="ps-hero">
+<div class="ps-wrap ps-hero__grid">
+<div class="ps-hero__head">
+<span class="ps-eyebrow">상담 회기를 위한 시각 자료 라이브러리</span>
+<h1>치료용 마인드맵</h1>
+<p class="ps-hero__sub">감정, 패턴, 행동, 관계를 명확하고 체계적으로, 쉽게 찾아보며 이해할 수 있는 250장 이상의 시각 자료 아틀라스.</p>
+<div class="ps-hero__cta" style="margin-top:26px"><a class="ps-btn ps-btn--lg" href="#ps-oferta">지금 바로 이용하기 ↓</a></div></div>
+<figure class="ps-hero__figure">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" fetchpriority="high" height="900" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mockup-principal-es.jpg" width="1200"/>
+</figure>
+</div>
+</section>
+
+<div class="ps-tdf-acesso">
+<div class="ps-tdf-acesso-head">
+<span class="ps-tdf-acesso-badge">평생 이용</span>
+<p class="ps-tdf-acesso-sub">한 번 구매하면 자료는 평생 선생님의 것입니다.</p>
+</div>
+<div class="ps-tdf-acesso-grid">
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">∞</div>
+<div>
+<strong>평생 이용</strong>
+<span>월 구독료도, 갱신도, 만료일도 없습니다.</span>
+</div>
+</div>
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">🖨</div>
+<div>
+<strong>인쇄용 PDF</strong>
+<span>고해상도 파일입니다. 필요한 만큼 몇 번이든 인쇄하세요.</span>
+</div>
+</div>
+<div class="ps-tdf-acesso-item">
+<div class="ps-tdf-acesso-ico">↺</div>
+<div>
+<strong>언제든 찾아보세요</strong>
+<span>스마트폰, 컴퓨터 또는 인쇄본으로. 언제든지.</span>
+</div>
+</div>
+</div>
+</div>
+
+<section class="ps-section ps-section--deep" id="ps-inclui">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>포함된 모든 구성:</h2>
+</div>
+<ul class="ps-allin ps-reveal">
+<li><b>120</b> 감정 마인드맵 (240페이지)</li>
+<li><b>32</b> 시각 은유</li>
+<li><b>12</b> 비교 도표</li>
+<li><b>12</b> 상담 회기 플로차트</li>
+<li><b>12</b> 치료 접근법 마인드맵 <b>(보너스)</b></li>
+<li><b>6</b> 시각 척도 <b>(보너스)</b></li>
+<li>편집 가능한 심리 상담 문서 서식 <b>(보너스)</b></li>
+<li>추가 비용 없는 정기 업데이트 <b>(보너스)</b></li>
+<li>검색 색인 및 상황별 색인</li>
+<li>전체 참고문헌</li>
+<li>고해상도 PDF, 디지털 또는 인쇄용</li>
+<li>즉시 이용 &amp; 7일 환불 보장</li>
+</ul>
+</div>
+</section>
+
+<section class="ps-section" id="ps-conteudo">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>아틀라스 내부 살펴보기:</h2>
+</div>
+
+<div class="ps-marquee ps-reveal" id="ps-marquee">
+<div class="ps-gallery" id="ps-gallery" role="list">
+<figure class="ps-gallery__item" role="listitem">
+<img alt="치료용 마인드맵: 반추" decoding="async" height="1137" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/pagina-rumiacion-1.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="치료용 마인드맵: 번아웃" decoding="async" height="1253" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/pagina-agotamiento.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="치료용 마인드맵: 자기 방해" decoding="async" height="1273" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/pagina-autosabotaje.jpg" width="800"/>
+</figure>
+<figure class="ps-gallery__item" role="listitem">
+<img alt="치료용 마인드맵: 가면 증후군" decoding="async" height="1258" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/pagina-impostor.jpg" width="800"/>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt" id="ps-formatos">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>자료 자세히 보기:</h2>
+</div>
+<div class="ps-kinds ps-reveal">
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mock-mapas-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">240페이지</span>
+<h3>감정 마인드맵 </h3>
+<ul class="ps-kind__list">
+<li>모든 감정을 쉬운 말로 이해하세요</li>
+<li>몸과 생각, 행동에서 어떻게 나타나는지 알아차리세요</li>
+<li>패턴을 반복시키는 순환을 살펴보세요</li>
+</ul>
+</div>
+</article>
+<div class="ps-kinds ps-reveal">
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/anatomias-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">32장</span>
+<h3>시각 은유</h3>
+<ul class="ps-kind__list">
+<li>패턴을 한눈에 설명하는 은유</li>
+<li>그 패턴이 흔히 나타나는 여섯 가지 영역</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mock-tabela-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">12종</span>
+<h3>비교 도표</h3>
+<ul class="ps-kind__list">
+<li>비슷한 유형을 나란히 비교해 보세요</li>
+<li>네 가지 애착 유형, 의사소통 유형, 스트레스 반응</li>
+<li>항상 같은 기준으로, 한 줄씩</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="300" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mock-regua-es.jpg" width="424"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">6종</span>
+<h3>시각 척도</h3>
+<ul class="ps-kind__list">
+<li>지금 어느 지점에 있는지 확인하세요</li>
+<li>인내의 창, 감정 강도, 자기주장</li>
+</ul>
+</div>
+</article>
+<article class="ps-kind">
+<div class="ps-kind__media">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="424" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mock-desicao-es.jpg" width="300"/>
+</div>
+<div class="ps-kind__body">
+<span class="ps-kind__count">12종</span>
+<h3>상담 회기 플로차트</h3>
+<ul class="ps-kind__list">
+<li>어떤 마인드맵을 찾아야 할지 모를 때 여기서 시작하세요</li>
+<li>문제의 전문 용어가 아니라, 느끼는 것에서 출발합니다</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</div></section>
+
+<section class="ps-section" id="ps-como-funciona">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>각 마인드맵의 구성을 확인하세요:</h2>
+</div>
+<div class="ps-anatomy">
+<figure class="ps-anatomy__figure ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="1272" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mapa-detalhado-es.jpg" width="900"/>
+</figure>
+<ol class="ps-steps ps-reveal">
+<li><span class="ps-steps__num">01</span><div><h3>이해하기</h3><p>핵심 개념을 명확하게 설명합니다.</p></div></li>
+<li><span class="ps-steps__num">02</span><div><h3>알아차리기</h3><p>몸에서, 생각에서, 행동에서 나타나는 신호.</p></div></li>
+<li><span class="ps-steps__num">03</span><div><h3>순환 관찰하기</h3><p>무엇이 촉발하고, 무엇이 강화하며, 무엇이 유지시키는지.</p></div></li>
+<li><span class="ps-steps__num">04</span><div><h3>탐색하기</h3><p>성찰을 깊게 하는 질문.</p></div></li>
+<li><span class="ps-steps__num">05</span><div><h3>깊이 보기</h3><p>주제와 관련된 욕구와 신념.</p></div></li>
+<li><span class="ps-steps__num">06</span><div><h3>다음 단계</h3><p>더 탐색할 수 있는 경로.</p></div></li>
+</ol>
+</div>
+</div>
+</section>
+
+
+<section class="ps-section" id="ps-sumario" style="background:var(--surface)">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>구매 전에 모든 주제를 미리 확인하세요</h2>
+</div>
+<div class="ps-summary-list" data-accordion="">
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-01" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-01">
+<span class="ps-acc__index">01</span>
+<span class="ps-acc__title">불안, 두려움, 걱정</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-01" class="ps-acc__panel" id="ps-sum-01" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>1</b>불안의 순환</li><li><b>2</b>과도한 걱정</li><li><b>3</b>반추</li><li><b>4</b>불확실성에 대한 불내성</li><li><b>5</b>과잉 경계</li><li><b>6</b>불안으로 인한 회피</li><li><b>7</b>실수에 대한 두려움</li><li><b>8</b>실패에 대한 두려움</li><li><b>9</b>타인의 평가에 대한 두려움</li><li><b>10</b>통제 욕구</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-02" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-02">
+<span class="ps-acc__index">02</span>
+<span class="ps-acc__title">감정과 감정 조절</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-02" class="ps-acc__panel" id="ps-sum-02" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>11</b>분노</li><li><b>12</b>죄책감</li><li><b>13</b>수치심</li><li><b>14</b>슬픔</li><li><b>15</b>좌절감</li><li><b>16</b>원망</li><li><b>17</b>질투</li><li><b>18</b>외로움</li><li><b>19</b>감정적 압도</li><li><b>20</b>감정을 알아차리고 표현하기 어려움</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-03" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-03">
+<span class="ps-acc__index">03</span>
+<span class="ps-acc__title">자존감과 정체성</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-03" class="ps-acc__panel" id="ps-sum-03" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>21</b>내면의 비판자</li><li><b>22</b>끊임없는 비교</li><li><b>23</b>가면 증후군</li><li><b>24</b>인정 욕구</li><li><b>25</b>낮은 자존감</li><li><b>26</b>자기 이미지</li><li><b>27</b>완벽주의</li><li><b>28</b>자기 가치</li><li><b>29</b>진정성 대 순응</li><li><b>30</b>자기 연민</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-04" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-04">
+<span class="ps-acc__index">04</span>
+<span class="ps-acc__title">관계와 유대</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-04" class="ps-acc__panel" id="ps-sum-04" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>31</b>애착 유형</li><li><b>32</b>정서적 의존</li><li><b>33</b>공의존</li><li><b>34</b>버림받음에 대한 두려움</li><li><b>35</b>거절 민감성</li><li><b>36</b>질투와 불안정감</li><li><b>37</b>신뢰의 어려움</li><li><b>38</b>반복되는 관계 패턴</li><li><b>39</b>정서적 거리 두기</li><li><b>40</b>친밀감에 대한 두려움</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-05" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-05">
+<span class="ps-acc__index">05</span>
+<span class="ps-acc__title">가족과 성장 배경</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-05" class="ps-acc__panel" id="ps-sum-05" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>41</b>가족 내 역할</li><li><b>42</b>부모화</li><li><b>43</b>가족 삼각관계</li><li><b>44</b>정서적 방임</li><li><b>45</b>가족의 기대</li><li><b>46</b>가족과 거리를 둘 때의 죄책감</li><li><b>47</b>어머니 인물과의 관계</li><li><b>48</b>아버지 인물과의 관계</li><li><b>49</b>형제자매 갈등</li><li><b>50</b>세대 간 전수되는 패턴</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-06" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-06">
+<span class="ps-acc__index">06</span>
+<span class="ps-acc__title">스트레스, 트라우마, 안전감</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-06" class="ps-acc__panel" id="ps-sum-06" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>51</b>투쟁 반응</li><li><b>52</b>도피 반응</li><li><b>53</b>얼어붙음 반응</li><li><b>54</b>굴복 반응</li><li><b>55</b>정서적 트리거</li><li><b>56</b>인내의 창</li><li><b>57</b>과각성</li><li><b>58</b>단절과 저각성</li><li><b>59</b>안전감</li><li><b>60</b>힘든 경험 이후의 안정화와 회복</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-07" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-07">
+<span class="ps-acc__index">07</span>
+<span class="ps-acc__title">자기 방해와 행동 패턴</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-07" class="ps-acc__panel" id="ps-sum-07" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>61</b>미루기</li><li><b>62</b>자기 방해</li><li><b>63</b>우유부단</li><li><b>64</b>어려운 과제 회피</li><li><b>65</b>과도한 확신 추구</li><li><b>66</b>충동성</li><li><b>67</b>습관의 순환</li><li><b>68</b>모두를 만족시키려는 욕구</li><li><b>69</b>자신에 대한 높은 기준</li><li><b>70</b>단기적 안도의 순환</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-08" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-08">
+<span class="ps-acc__index">08</span>
+<span class="ps-acc__title">경계와 의사소통</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-08" class="ps-acc__panel" id="ps-sum-08" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>71</b>개인적 경계</li><li><b>72</b>거절하기 어려움</li><li><b>73</b>경계를 세울 때의 죄책감</li><li><b>74</b>자기주장적 의사소통</li><li><b>75</b>수동적 의사소통</li><li><b>76</b>공격적 의사소통</li><li><b>77</b>수동 공격적 의사소통</li><li><b>78</b>어려운 대화</li><li><b>79</b>욕구 표현하기</li><li><b>80</b>갈등 이후의 관계 회복</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-09" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-09">
+<span class="ps-acc__index">09</span>
+<span class="ps-acc__title">애도, 상실, 변화</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-09" class="ps-acc__panel" id="ps-sum-09" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>81</b>애도 이해하기</li><li><b>82</b>예기 애도</li><li><b>83</b>모호한 상실</li><li><b>84</b>관계의 끝</li><li><b>85</b>중요한 사람의 상실</li><li><b>86</b>실직</li><li><b>87</b>거주지나 환경의 변화</li><li><b>88</b>삶의 전환기</li><li><b>89</b>애도의 트리거</li><li><b>90</b>상실 이후 의미 재구성</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-10" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-10">
+<span class="ps-acc__index">10</span>
+<span class="ps-acc__title">몸, 자기 이미지, 친밀감</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-10" class="ps-acc__panel" id="ps-sum-10" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>91</b>신체 이미지</li><li><b>92</b>신체에 대한 수치심</li><li><b>93</b>신체 비교</li><li><b>94</b>자기 몸과의 관계</li><li><b>95</b>스트레스와 신체 감각</li><li><b>96</b>신체 신호 알아차리기</li><li><b>97</b>긴장과 경계 상태</li><li><b>98</b>친밀감과 취약성</li><li><b>99</b>친밀함 속의 수치심</li><li><b>100</b>몸과 감정의 연결</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-11" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-11">
+<span class="ps-acc__index">11</span>
+<span class="ps-acc__title">일, 돈, 삶의 의미</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-11" class="ps-acc__panel" id="ps-sum-11" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>101</b>번아웃</li><li><b>102</b>쉴 때의 죄책감</li><li><b>103</b>과로</li><li><b>104</b>직장에서의 경계</li><li><b>105</b>직업적 가면 증후군</li><li><b>106</b>돈을 요구하는 두려움</li><li><b>107</b>돈에 대한 신념</li><li><b>108</b>경제적 불안</li><li><b>109</b>진로 전환</li><li><b>110</b>일의 의미와 가치</li>
+</ol></div>
+</div>
+</div>
+
+<div class="ps-acc">
+<h3><button aria-controls="ps-sum-12" aria-expanded="false" class="ps-acc__trigger" id="ps-sumb-12">
+<span class="ps-acc__index">12</span>
+<span class="ps-acc__title">자기 이해와 내면의 자원</span>
+<span class="ps-acc__badge">마인드맵 10장</span>
+<span aria-hidden="true" class="ps-acc__arrow"></span>
+</button></h3>
+<div aria-labelledby="ps-sumb-12" class="ps-acc__panel" id="ps-sum-12" role="region">
+<div class="ps-acc__inner"><ol class="ps-maps">
+<li><b>111</b>정서적 욕구</li><li><b>112</b>개인적 가치</li><li><b>113</b>생각 → 감정 → 행동</li><li><b>114</b>트리거 찾기</li><li><b>115</b>지지 체계</li><li><b>116</b>대처 전략</li><li><b>117</b>내면의 자원</li><li><b>118</b>치료 목표</li><li><b>119</b>변화 알아차리기</li><li><b>120</b>개인 지속 계획</li>
+</ol></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--deep">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<h2>색인으로 자료를 쉽고 명확하게 탐색하세요.</h2>
+</div>
+<div class="ps-smart">
+<figure class="ps-smart__figure ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="1272" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/indice-es.jpg" width="900"/>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">실제 상담에서의 차이</span>
+<h2>같은 주제, 아틀라스가 있을 때와 없을 때</h2>
+</div>
+<div class="ps-compare">
+<div class="ps-compare__col ps-reveal">
+<h3>지금까지는</h3>
+<ul>
+<li>개념이 서로 다른 세 권의 책에 흩어져 있습니다.</li>
+<li>같은 주제를 매번 처음부터 다시 설명합니다.</li>
+<li>그 자리에서 종이에 그려 주지만, 그 그림은 사라집니다.</li>
+<li>내담자는 회기를 마치고 나가면 절반을 잊어버립니다.</li>
+<li>내담자에게 건넬 시각 자료가 남지 않습니다.</li>
+<li>직접 자료를 만드느라 매주 귀한 시간을 쓰고 계십니다.</li>
+</ul>
+</div>
+<div class="ps-compare__col ps-compare__col--after ps-reveal">
+<h3>아틀라스와 함께라면</h3>
+<ul>
+<li>색인 덕분에 몇 초 만에 주제를 찾습니다.</li>
+<li>모든 마인드맵은 같은 구조로 되어 있습니다.</li>
+<li>페이지가 이미 준비되어 있어 바로 보여 주거나 인쇄할 수 있습니다.</li>
+<li>내담자가 마인드맵을 가져가 나중에 다시 봅니다.</li>
+<li>성찰 질문이 자료에 이미 포함되어 있습니다.</li>
+<li>따로 준비할 필요 없이, 열어서 바로 쓰면 됩니다.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--tight ps-section--alt" id="ps-referencias" style="padding-bottom:clamp(40px,4vw,56px)">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow" style="margin-bottom:12px">연구 및 참고문헌</span>
+<p class="ps-lead" style="max-width:70ch">편집 과정에서 다양한 심리학 학파의 개념을 참고했습니다.</p>
+</div>
+<ul class="ps-refs ps-reveal">
+<li><p class="ps-refs__name">Aaron &amp; Judith Beck</p><p class="ps-refs__line">인지행동치료(CBT)</p></li>
+<li><p class="ps-refs__name">Jeffrey E. Young</p><p class="ps-refs__line">심리도식치료</p></li>
+<li><p class="ps-refs__name">Marsha M. Linehan</p><p class="ps-refs__line">DBT</p></li>
+<li><p class="ps-refs__name">Steven C. Hayes</p><p class="ps-refs__line">ACT</p></li>
+<li><p class="ps-refs__name">John Bowlby</p><p class="ps-refs__line">애착 이론</p></li>
+<li><p class="ps-refs__name">Paul Gilbert</p><p class="ps-refs__line">자비</p></li>
+<li><p class="ps-refs__name">James Gross</p><p class="ps-refs__line">감정 조절</p></li>
+<li><p class="ps-refs__name">Leslie Greenberg</p><p class="ps-refs__line">정서중심치료</p></li>
+</ul>
+<p class="ps-disclaimer ps-reveal" style="margin-top:20px;font-size:.78rem">저자와 저작의 언급은 참고문헌 또는 개념적 영감을 밝히기 위한 것이며, 해당 저자들이 비주얼 심리치료 아틀라스에 참여, 검토, 협력 또는 보증했음을 의미하지 않습니다.</p>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">이용 안내</span>
+<h2>받으시는 모든 구성</h2>
+</div>
+<div class="ps-stack">
+<article class="ps-stack__item ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mockup-mapas-es.jpg" width="600"/>
+<div>
+<h3>감정 마인드맵 120장</h3>
+<p>12개 영역, 240페이지 구성.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/anatomias-mock-es.jpg" width="600"/>
+<div>
+<h3>시각 은유 32장</h3>
+<p>패턴이 내부에서 어떻게 작동하는지 한눈에.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mockup-regua-es.jpg" width="600"/>
+<div>
+<h3>비교 도표 12장</h3>
+<p>같은 주제의 여러 유형을 나란히 비교합니다.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/fluxogramas-es.jpg" width="600"/>
+<div>
+<h3>상담 회기 플로차트 12종</h3>
+<p>영역마다 하나씩. 상황에서 알맞은 마인드맵으로.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/indice-es.jpg" width="600"/>
+<div>
+<h3>검색 색인 및 참고문헌</h3>
+<p>어떤 주제든 찾고 출처를 확인하세요.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="margin-left:0">
+<span class="ps-eyebrow">핵심 자료 외에도</span>
+<h2>이용 시 함께 제공되는 보너스</h2>
+</div>
+<div class="ps-stack">
+<article class="ps-stack__item ps-stack__item--bonus ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mapas-abordagens-es.jpg" width="600"/>
+<div>
+<span class="ps-stack__label--bonus">보너스 01</span>
+<h3>주요 치료 접근법 마인드맵 12장</h3>
+<p>인지행동치료(CBT), 정신분석, 게슈탈트 치료, ACT, DBT, 심리도식치료, 체계론적 가족치료, 인본주의 치료, 융 분석심리치료, EMDR, 신체경험(SE), 교류분석을 같은 기준으로 비교했습니다.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-stack__item--bonus ps-reveal">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="450" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/documentos-es.jpg" width="600"/>
+<div>
+<span class="ps-stack__label--bonus">보너스 02</span>
+<h3>편집 가능한 심리 상담 문서 서식</h3>
+<p>단계별 작성 안내가 담긴 서식: 상담 확인서, 심리평가 보고서, 경과 보고서, 소견서, 타 전문가 의뢰서. 100% 편집 가능.</p>
+</div>
+</article>
+<article class="ps-stack__item ps-stack__item--bonus ps-stack__item--noimg ps-reveal">
+<div>
+<span class="ps-stack__label--bonus">보너스 03</span>
+<h3>정기 업데이트</h3>
+<p>새 자료와 기존 자료의 개정판이 정기적으로 추가되며, 이미 이용 중인 분께는 추가 비용이 없습니다.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+
+<section class="ps-section ps-offer" id="ps-oferta">
+<div class="ps-wrap">
+<div class="ps-wrap-narrow ps-reveal" style="text-align:center">
+<span class="ps-eyebrow ps-eyebrow--light">전체 이용</span>
+<h2>비주얼 심리치료 아틀라스 전체본을 만나 보세요</h2>
+</div>
+<figure class="ps-reveal" style="margin:0 auto 28px;max-width:640px"><img alt="비주얼 심리치료 아틀라스" decoding="async" height="900" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mockup-geral-es.jpg" width="1200"/></figure>
+<ul class="ps-offer__list ps-offer__list--center ps-reveal">
+<li>감정 마인드맵 120장 (240쪽)</li>
+<li>시각 은유 32장</li>
+<li>비교 도표 12장</li>
+<li>상담 회기 플로차트 12종</li>
+<li>검색 색인 및 참고문헌</li>
+<li><b>보너스:</b> 주요 치료 접근법 마인드맵 12장</li>
+<li><b>보너스:</b> 시각 척도 6종</li>
+<li><b>보너스:</b> 편집 가능한 심리 상담 문서 서식</li>
+<li><b>보너스:</b> 추가 비용 없는 정기 업데이트</li>
+</ul>
+<div class="ps-pricebox ps-reveal">
+<p class="ps-price__from">정가 <s>{{original_price}}</s> · 오늘만 특가</p>
+<p class="ps-price__now">{{price}}</p>
+<p class="ps-price__cash">1회 결제 · 월 구독료 없음</p>
+<div style="display:flex;justify-content:center;width:100%;margin:0 0 14px;">
+<span style="
+    display:inline-block;text-align:center;
+    max-width:100%;box-sizing:border-box;
+    background:#EDF5EE;color:#3B6B40;
+    border:1.5px solid #A8CDA9;border-radius:40px;
+    font-family:'Noto Sans KR',-apple-system,'Segoe UI',sans-serif;
+    font-size:12px;font-weight:700;
+    letter-spacing:.05em;text-transform:uppercase;
+    padding:9px 16px;line-height:1.35;">
+    1회 결제, 평생 이용
+  </span>
+</div>
+<a class="ps-btn" href="/checkout">지금 바로 이용하기</a>
+<p class="ps-microcopy">안전한 결제 • 즉시 디지털 이용 • 7일 환불 보장</p>
+</div>
+</div>
+</section>
+
+<section class="ps-section">
+<div class="ps-wrap ps-guarantee ps-reveal">
+<figure class="ps-reveal" style="margin:0"><img alt="비주얼 심리치료 아틀라스" decoding="async" height="400" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/selo-garantia.jpg" width="400"/></figure>
+<div>
+<h2>조건 없는 7일 환불 보장</h2>
+<p class="ps-lead" style="margin-top:22px">전체 자료를 바로 이용하세요. 맞지 않으면 7일 이내에 환불을 요청하실 수 있습니다.</p>
+</div>
+</div>
+<div class="ps-wrap ps-cta-solo ps-reveal" style="margin-top:34px">
+<a class="ps-btn ps-btn--lg" href="#ps-oferta">지금 바로 이용하기 ↓</a>
+</div>
+</section>
+
+<section class="ps-section ps-section--alt" id="ps-faq">
+<div class="ps-wrap">
+<div class="ps-reveal">
+<h2>자주 묻는 질문:</h2>
+</div>
+<div class="ps-faq" data-accordion="">
+<div class="ps-acc"><h3><button aria-controls="ps-faq-1" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-1"><span class="ps-acc__title">아틀라스는 실물 책인가요?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-1" class="ps-acc__panel" id="ps-faq-1" role="region"><div class="ps-acc__inner"><p>아닙니다. 자료는 디지털 형식(PDF)으로 제공됩니다. 스마트폰, 컴퓨터, 태블릿에서 보실 수 있고 원하는 마인드맵을 인쇄하실 수 있습니다.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-2" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-2"><span class="ps-acc__title">치료자만 사용할 수 있나요?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-2" class="ps-acc__panel" id="ps-faq-2" role="region"><div class="ps-acc__inner"><p>아닙니다. 내용은 이해하기 쉬운 교육적 언어로 쓰였으며, 자기 이해에 관심 있는 누구나 이해할 수 있도록 만들어졌습니다.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-5" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-5"><span class="ps-acc__title">마인드맵을 전부 받을 수 있나요?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-5" class="ps-acc__panel" id="ps-faq-5" role="region"><div class="ps-acc__inner"><p>네. 12개 영역으로 구성된 마인드맵 120장과 시각 은유 32장, 비교 도표 12장, 상담 회기 플로차트 12종, 그리고 보너스가 모두 포함됩니다.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-13" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-13"><span class="ps-acc__title">시각 은유, 비교 도표, 플로차트, 척도는 무엇인가요?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-13" class="ps-acc__panel" id="ps-faq-13" role="region"><div class="ps-acc__inner"><p>마인드맵을 보완하는 형식들입니다. 시각 은유는 한 페이지로 여러 패턴이 어떻게 작동하는지 보여 주고, 비교 도표는 같은 주제의 유형을 나란히 비교하며, 플로차트는 상황에서 출발해 어떤 마인드맵을 볼지 안내하고, 척도는 점수나 분류 없이 서술적 단계를 제시합니다.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-7" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-7"><span class="ps-acc__title">마인드맵으로 진단을 하나요?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-7" class="ps-acc__panel" id="ps-faq-7" role="region"><div class="ps-acc__inner"><p>아닙니다. 이 자료는 심리교육 목적이며 전문가의 진단이나 평가를 대신하지 않습니다.</p></div></div></div>
+<div class="ps-acc"><h3><button aria-controls="ps-faq-12" aria-expanded="false" class="ps-acc__trigger" id="ps-faqb-12"><span class="ps-acc__title">환불 보장이 있나요?</span><span aria-hidden="true" class="ps-acc__arrow"></span></button></h3>
+<div aria-labelledby="ps-faqb-12" class="ps-acc__panel" id="ps-faq-12" role="region"><div class="ps-acc__inner"><p>네. 7일 환불 보장이 적용됩니다.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="ps-section ps-final">
+<div class="ps-wrap ps-final__grid">
+<div class="ps-reveal">
+<span class="ps-eyebrow">240페이지 • 12개 영역 • 하나의 라이브러리</span>
+<h2>주요 치료 주제를 한곳에 시각적으로 정리해 두세요.</h2>
+<p class="ps-final__verbs">찾아보고. 탐색하고. 깊이 보세요.<br/>새로운 주제가 나올 때마다 다시 찾아보세요.</p>
+<a class="ps-btn ps-btn--lg" href="#ps-oferta">지금 바로 이용하기 ↓</a>
+<p class="ps-microcopy">즉시 이용 • 디지털 파일 • 7일 환불 보장</p>
+</div>
+<figure class="ps-final__figure ps-reveal" style="margin:0">
+
+<img alt="비주얼 심리치료 아틀라스" decoding="async" height="800" src="https://recursos-pdf-hub.github.io/entregas-4/psios-kr/landing-img/mockup-geral-final.jpg" width="1000"/>
+</figure>
+</div>
+</section>
+<footer style="text-align:center;padding:40px 20px 56px;font-size:13px;color:var(--muted,#6b6b6b);line-height:1.6">
+<p style="font-weight:600;margin:0 0 6px">비주얼 심리치료 아틀라스</p>
+<p style="max-width:640px;margin:0 auto 12px">심리교육용 자료입니다. 이 내용은 자격을 갖춘 전문가의 진단, 치료, 평가 또는 상담을 대신하는 용도로 사용해서는 안 됩니다.</p>
+<p style="margin:0">비주얼 심리치료 아틀라스 © 2026 — 모든 권리 보유.</p>
+</footer>
+</main></div><script>try{
+(function () {
+  "use strict";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+
+  
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute("href");
+    if (id.length < 2) return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.pageYOffset - 76;
+    window.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+  });
+
+  
+  document.querySelectorAll("[data-accordion]").forEach(function (group) {
+    group.querySelectorAll(".ps-acc__trigger").forEach(function (trigger) {
+      var panel = document.getElementById(trigger.getAttribute("aria-controls"));
+      trigger.addEventListener("click", function () {
+        var isOpen = trigger.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          panel.style.height = panel.scrollHeight + "px";
+          requestAnimationFrame(function () { panel.style.height = "0px"; });
+          trigger.setAttribute("aria-expanded", "false");
+        } else {
+          trigger.setAttribute("aria-expanded", "true");
+          panel.style.height = panel.scrollHeight + "px";
+          window.setTimeout(function () {
+            if (trigger.getAttribute("aria-expanded") === "true") panel.style.height = "auto";
+          }, 360);
+        }
+      });
+    });
+  });
+
+  
+  var marquee = document.getElementById("ps-marquee");
+  var track = document.getElementById("ps-gallery");
+  if (marquee && track && track.firstElementChild) {
+    // 1. agrupa os itens originais
+    var group = document.createElement("div");
+    group.className = "ps-gallery__group";
+    while (track.firstElementChild) group.appendChild(track.firstElementChild);
+    track.appendChild(group);
+
+    // 2. imagens deixam de ser lazy: a largura não pode mudar depois
+    track.querySelectorAll("img").forEach(function (img) {
+      img.loading = "eager";
+      img.removeAttribute("loading");
+    });
+
+    var groupWidth = 0;
+    var x = 0;
+    var speed = 42;   // pixels por segundo
+    var last = null;
+    var paused = false;
+
+    // 3. clona grupos até o trilho cobrir pelo menos 3x a largura da tela.
+    //    com folga assim, nunca existe borda visível durante o reposicionamento.
+    function build() {
+      groupWidth = group.getBoundingClientRect().width;
+      if (!groupWidth) return;
+      var alvo = window.innerWidth * 3 + groupWidth;
+      var atual = track.getBoundingClientRect().width;
+      var guarda = 0;
+      while (atual < alvo && guarda < 12) {
+        var c = group.cloneNode(true);
+        c.setAttribute("aria-hidden", "true");
+        track.appendChild(c);
+        atual += groupWidth;
+        guarda++;
+      }
+    }
+
+    function measure() {
+      var novo = group.getBoundingClientRect().width;
+      if (novo && Math.abs(novo - groupWidth) > 1) {
+        groupWidth = novo;
+        x = 0;
+      }
+    }
+
+    build();
+    window.addEventListener("resize", function () { measure(); build(); });
+    window.addEventListener("orientationchange", function () { measure(); build(); });
+    window.addEventListener("load", function () { measure(); build(); });
+    track.querySelectorAll("img").forEach(function (img) {
+      if (!img.complete) img.addEventListener("load", function () { measure(); build(); });
+    });
+
+    // 4. loop em pixels
+    function frame(now) {
+      if (last === null) last = now;
+      var dt = (now - last) / 1000;
+      last = now;
+      if (dt > 0.25) dt = 0;
+      if (!paused && groupWidth > 0) {
+        x -= speed * dt;
+        while (x <= -groupWidth) x += groupWidth;
+        track.style.transform = "translate3d(" + x + "px,0,0)";
+      }
+      requestAnimationFrame(frame);
+    }
+    if (!reduceMotion) requestAnimationFrame(frame);
+
+    marquee.addEventListener("click", function () { paused = !paused; });
+    marquee.addEventListener("touchstart", function () { paused = true; }, { passive: true });
+    marquee.addEventListener("touchend", function () { paused = false; }, { passive: true });
+    marquee.addEventListener("mouseenter", function () { paused = true; });
+    marquee.addEventListener("mouseleave", function () { paused = false; });
+    document.addEventListener("visibilitychange", function () { last = null; });
+  }
+
+  
+  var revealables = document.querySelectorAll(".ps-reveal");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealables.forEach(function (el) { el.classList.add("ps-is-visible"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ps-is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealables.forEach(function (el) { io.observe(el); });
+  }
+})();
+
+(function(){function chk(){var vh=window.innerHeight||800;document.querySelectorAll('.ps-reveal:not(.ps-is-visible)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*1.15&&r.bottom>-vh*0.5){el.classList.add('ps-is-visible');}});}window.addEventListener('scroll',chk,{passive:true});window.addEventListener('resize',chk);window.addEventListener('load',function(){chk();setTimeout(chk,600);setTimeout(chk,2000);});document.addEventListener('DOMContentLoaded',chk);})();
+
+setTimeout(function(){document.querySelectorAll('.ps-reveal').forEach(function(e){e.classList.add('ps-is-visible')})},2500);
+}catch(e){document.querySelectorAll(".ps-reveal").forEach(function(x){x.classList.add("ps-is-visible")})}</script>
